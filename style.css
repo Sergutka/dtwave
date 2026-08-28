@@ -444,7 +444,7 @@ p:last-child{ margin-bottom:0; }
 @media (max-width:900px){ .testi-grid{ grid-template-columns:1fr; } }
 .testi-card{ background:var(--black-2); padding:36px 30px; display:flex; flex-direction:column; min-height:230px; }
 .testi-quote{ flex:1; font-size:15px; color:var(--white); opacity:0.85; font-style:italic; }
-.testi-name{ margin-top:20px; font-family:var(--font-mono); font-size:12px; letter-spacing:0.06em; color:var(--gray-dim); text-transform:uppercase; }
+.testi-name{ margin-bottom:16px; font-family:var(--font-mono); font-size:12px; letter-spacing:0.06em; color:var(--ember-bright); text-transform:uppercase; }
 .testi-card.placeholder{ border:1px dashed var(--line); background:transparent; }
 .testi-card.placeholder .testi-quote{ opacity:0.4; }
 
