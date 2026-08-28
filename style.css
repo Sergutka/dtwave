@@ -217,7 +217,23 @@ p:last-child{ margin-bottom:0; }
   filter:grayscale(1) contrast(1.08);
 }
 @media (max-width:720px){
-  .hero-media{ background-position:62% 12%; }
+  .hero{
+    display:block; min-height:auto; padding-top:88px;
+  }
+  .hero-media{
+    position:relative; inset:auto;
+    height:58vh; min-height:360px; max-height:520px;
+    background-position:60% 22%;
+  }
+  .hero-media::after{
+    background:linear-gradient(180deg, rgba(11,11,10,0.05) 55%, rgba(11,11,10,0.85) 92%, var(--black) 100%),
+               linear-gradient(90deg, rgba(11,11,10,0.35) 0%, rgba(11,11,10,0) 40%);
+  }
+  .hero-content{
+    position:relative; z-index:2;
+    padding:30px var(--gutter) 56px;
+    background:var(--black);
+  }
 }
 .hero-media::after{
   content:"";
