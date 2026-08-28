@@ -360,9 +360,9 @@ p:last-child{ margin-bottom:0; }
   align-items:baseline; gap:8px 28px;
   background:var(--ember);
 }
-.principle-card.is-result .principle-tag{ color:rgba(255,255,255,0.75); flex-basis:100%; }
-.principle-card.is-result h3{ color:var(--white); }
-.principle-card.is-result p{ color:rgba(255,255,255,0.88); max-width:640px; }
+.principle-card.is-result .principle-tag{ color:rgba(255,255,255,0.75); flex-basis:100%; font-size:13px; }
+.principle-card.is-result h3{ color:var(--white); font-size:clamp(26px,3.2vw,34px); }
+.principle-card.is-result p{ color:rgba(255,255,255,0.88); max-width:640px; font-size:17px; }
 .principle-tag{ font-family:var(--font-mono); font-size:11px; letter-spacing:0.14em; color:var(--ember-bright); text-transform:uppercase; }
 .principle-card p{ font-size:14.5px; }
 
