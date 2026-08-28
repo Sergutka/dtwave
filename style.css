@@ -305,14 +305,18 @@ p:last-child{ margin-bottom:0; }
   padding:26px 0; border-bottom:1px solid var(--line);
 }
 .stat-compare-head{
-  padding:0 0 14px;
+  padding:0 0 20px;
   border-bottom:1px solid var(--line);
 }
 .stat-compare-head .stat-compare-label{ visibility:hidden; }
 .stat-compare-head .stat-compare-was,
 .stat-compare-head .stat-compare-now{
-  font-size:11px; letter-spacing:0.12em; text-transform:uppercase; font-family:var(--font-mono);
+  font-family:var(--font-display); text-transform:uppercase;
+  font-size:clamp(20px,2.6vw,30px); letter-spacing:0.03em; font-weight:600;
+  line-height:1;
 }
+.stat-compare-head .stat-compare-was{ color:var(--gray); }
+.stat-compare-head .stat-compare-now{ color:var(--ember-bright); }
 .stat-compare-label{
   font-family:var(--font-mono); font-size:12.5px; letter-spacing:0.08em;
   text-transform:uppercase; color:var(--gray-dim);
