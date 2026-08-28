@@ -367,6 +367,21 @@ p:last-child{ margin-bottom:0; }
 .principle-card p{ font-size:14.5px; }
 
 /* ---------------- System / wave diagram ---------------- */
+/* ---------------- System spec block ---------------- */
+.system-spec{
+  display:grid; grid-template-columns:repeat(3,1fr); gap:1px;
+  background:var(--line); margin-top:56px;
+}
+.system-spec-item{ background:var(--black-2); padding:30px 26px; }
+.system-spec-label{
+  font-family:var(--font-mono); font-size:11px; letter-spacing:0.14em;
+  text-transform:uppercase; color:var(--ember-bright); margin-bottom:14px;
+}
+.system-spec-item p{ font-size:14px; line-height:1.65; }
+@media (max-width:900px){ .system-spec{ grid-template-columns:1fr; } }
+
+.system-stages{ margin-top:10px; }
+
 .wave-diagram{ margin-top:60px; }
 .wave-diagram svg{ width:100%; height:auto; display:block; }
 .wave-phases{
