@@ -211,35 +211,21 @@ p:last-child{ margin-bottom:0; }
 }
 .hero-media{
   position:absolute; inset:0;
+  overflow:hidden;
+}
+.hero-media::before{
+  content:"";
+  position:absolute; inset:0;
   background-image:var(--hero-img);
   background-size:cover;
   background-position:78% 15%;
-  filter:grayscale(1) contrast(1.08);
-}
-@media (max-width:720px){
-  .hero{
-    display:block; min-height:auto; padding-top:88px;
-  }
-  .hero-media{
-    position:relative; inset:auto;
-    height:58vh; min-height:360px; max-height:520px;
-    background-position:60% 22%;
-  }
-  .hero-media::after{
-    background:linear-gradient(180deg, rgba(11,11,10,0.05) 55%, rgba(11,11,10,0.85) 92%, var(--black) 100%),
-               linear-gradient(90deg, rgba(11,11,10,0.35) 0%, rgba(11,11,10,0) 40%);
-  }
-  .hero-content{
-    position:relative; z-index:2;
-    padding:30px var(--gutter) 56px;
-    background:var(--black);
-  }
+  filter:grayscale(1) contrast(1.02) brightness(1.32);
 }
 .hero-media::after{
   content:"";
   position:absolute; inset:0;
-  background:linear-gradient(180deg, rgba(11,11,10,0.35) 0%, rgba(11,11,10,0.35) 35%, rgba(11,11,10,0.96) 92%),
-             linear-gradient(90deg, rgba(11,11,10,0.72) 0%, rgba(11,11,10,0.5) 34%, rgba(11,11,10,0.08) 52%, rgba(11,11,10,0.02) 100%);
+  background:linear-gradient(180deg, rgba(11,11,10,0.14) 0%, rgba(11,11,10,0.04) 22%, rgba(11,11,10,0.5) 82%, rgba(11,11,10,0.92) 100%),
+             linear-gradient(90deg, rgba(11,11,10,0.86) 0%, rgba(11,11,10,0.72) 22%, rgba(11,11,10,0.4) 42%, rgba(11,11,10,0.08) 60%, rgba(11,11,10,0) 78%);
 }
 .hero-content{
   position:relative; z-index:2;
@@ -272,7 +258,27 @@ p:last-child{ margin-bottom:0; }
 }
 .scroll-cue::after{ content:""; width:1px; height:46px; background:var(--gray-dim); animation:pulseLine 2.4s ease-in-out infinite; }
 @keyframes pulseLine{ 0%,100%{ opacity:0.3; } 50%{ opacity:1; } }
-@media (max-width:720px){ .scroll-cue{ display:none; } }
+@media (max-width:720px){
+  .scroll-cue{ display:none; }
+  .hero{
+    display:block; min-height:auto; padding-top:88px;
+  }
+  .hero-media{
+    position:relative; inset:auto;
+    height:58vh; min-height:360px; max-height:520px;
+  }
+  .hero-media::before{
+    background-position:60% 22%;
+  }
+  .hero-media::after{
+    background:linear-gradient(180deg, rgba(11,11,10,0) 60%, rgba(11,11,10,0.75) 92%, var(--black) 100%);
+  }
+  .hero-content{
+    position:relative; z-index:2;
+    padding:30px var(--gutter) 56px;
+    background:var(--black);
+  }
+}
 
 /* ---------------- reveal ---------------- */
 .reveal{ opacity:0; transform:translateY(28px); transition:opacity .8s ease, transform .8s ease; }
