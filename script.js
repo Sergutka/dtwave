@@ -1,5 +1,5 @@
 // =========================================================
-// WAVE — интерактивность сайта
+// ESME — интерактивность сайта
 // =========================================================
 (function(){
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -126,14 +126,14 @@
         return;
       }
 
-      var subject = encodeURIComponent('Заявка с сайта WAVE от ' + name);
+      var subject = encodeURIComponent('Заявка с сайта ESME от ' + name);
       var body = encodeURIComponent(
         'Имя: ' + name + '\n' +
         'Контакт: ' + contact + '\n' +
         'Цель / запрос: ' + (goal || '—')
       );
       // TODO: заменить на реальный email или подключить сервис (Formspree / Telegram-бот / CRM)
-      window.location.href = 'mailto:info@wave-system.example?subject=' + subject + '&body=' + body;
+      window.location.href = 'mailto:info@esme-system.example?subject=' + subject + '&body=' + body;
       status.textContent = 'Открываем почтовый клиент для отправки заявки…';
       form.reset();
     });

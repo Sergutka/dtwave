@@ -1,5 +1,5 @@
 /* =========================================================
-   WAVE — персональный сайт Дмитрия Терещенко
+   WAVE — персональный сайт Дмитрия Терещенко (система ESME)
    ========================================================= */
 
 :root{
@@ -159,6 +159,22 @@ p:last-child{ margin-bottom:0; }
   letter-spacing:0.14em;
   text-transform:uppercase;
 }
+.logo--brand{
+  flex-direction:column; align-items:flex-start; gap:4px;
+}
+.logo--brand .logo-word{
+  font-size:20px; letter-spacing:0.16em; font-weight:600; line-height:1; color:var(--white);
+}
+.logo--brand .logo-word .dot{ color:var(--ember-bright); }
+.logo--brand small{
+  font-family:var(--font-mono);
+  font-size:10px;
+  color:var(--gray-dim);
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  line-height:1;
+  white-space:nowrap;
+}
 .nav-links{
   display:flex; gap:30px;
   font-family:var(--font-mono);
@@ -196,7 +212,7 @@ p:last-child{ margin-bottom:0; }
   .nav-toggle{ display:block; }
 }
 @media (max-width:520px){
-  .logo small{ display:none; }
+  .logo--brand small{ display:none; }
   .nav-cta{ gap:12px; }
   .nav-cta .btn{ padding:9px 14px !important; font-size:11px; }
 }
