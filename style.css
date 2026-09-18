@@ -523,18 +523,29 @@ p:last-child{ margin-bottom:0; }
 .contact-links{ display:flex; flex-direction:column; gap:0; }
 .contact-link-item{
   display:flex; align-items:center; justify-content:space-between;
+  gap:16px;
   padding:22px 0; border-top:1px solid var(--line);
 }
 .contact-link-item:last-child{ border-bottom:1px solid var(--line); }
+.contact-iconlabel{ display:flex; align-items:center; gap:12px; flex-shrink:0; }
+.contact-icon{ width:19px; height:19px; flex-shrink:0; color:var(--gray-dim); }
 .contact-link-item .label{ font-family:var(--font-mono); font-size:12px; letter-spacing:0.08em; text-transform:uppercase; color:var(--gray-dim); }
-.contact-link-item .value{ font-family:var(--font-display); font-size:17px; letter-spacing:0.02em; }
+.contact-link-item .value{
+  font-family:var(--font-display); font-size:17px; letter-spacing:0.02em;
+  text-align:right; word-break:break-word;
+}
 .contact-link-item a.value:hover{ color:var(--ember-bright); }
+@media (max-width:420px){
+  .contact-link-item .value{ font-size:14px; }
+}
 
 /* ---------------- Footer ---------------- */
 .site-footer{ padding:60px 0 40px; }
 .footer-inner{ display:flex; flex-wrap:wrap; gap:24px; align-items:center; justify-content:space-between; }
 .footer-social{ display:flex; gap:22px; font-family:var(--font-mono); font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:var(--gray-dim); }
+.footer-social a{ display:inline-flex; align-items:center; gap:7px; }
 .footer-social a:hover{ color:var(--white); }
+.footer-social svg{ width:15px; height:15px; }
 .footer-legal{ font-family:var(--font-mono); font-size:11.5px; color:var(--gray-dim); display:flex; gap:20px; flex-wrap:wrap; }
 
 /* ---------------- Mobile nav drawer ---------------- */
